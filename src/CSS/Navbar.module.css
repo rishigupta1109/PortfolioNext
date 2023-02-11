@@ -1,0 +1,109 @@
+.navbar{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 50px;
+    border-bottom: 1px outset rgba(128, 128, 128, 0.559) ;
+}
+.navbar h2{
+    transition: all 100ms ease-in-out;
+}
+.navbar h2:not(.active):hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color:  #00ffff;
+    text-shadow: 1px 1px 2px rgba(0, 255, 255, 1);
+}
+.logo{
+    height:70px;
+    width: 70px;
+    cursor: pointer;
+}
+.active{
+    color: #00ffff;
+    transform: scale(1.2);
+}
+@media (min-width:500px) and (max-width:1000px) {
+    .nav h2{
+        font-size: larger;
+    }
+    .active{
+        font-size: 2rem;
+    }
+}
+@media (max-width:500px){
+   .nav h2{
+        font-size: 15px;
+    }
+}
+.menubtnbox{
+    height:50px;
+    width:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.line1, .line2 ,.line3{
+    height:10px;
+    width:40px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: ease-in-out 1s;
+    -webkit-transition: ease-in-out 1s;
+    -moz-transition: ease-in-out 1s;
+    -ms-transition: ease-in-out 1s;
+    -o-transition: ease-in-out 1s;
+}
+.mobilemenu{
+    /* height: 60vh; */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    height: calc(100%-85px);
+    justify-content: flex-start;
+    gap:5vh;
+
+    align-items: center;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    color: white;
+}
+.mobilemenu h2{
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    
+}
+.mobilemenu hr{
+    width: 80%;
+    height: 1px;
+    background-color: rgba(194, 194, 194, 0.141);
+    border: none;
+}
+.logo:hover{
+    animation: rotate 1s ease-in-out forwards ;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+   
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
