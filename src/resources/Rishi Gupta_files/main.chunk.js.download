@@ -3479,14 +3479,14 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var _CSS_Projects_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../CSS/Projects.module.css */ "./src/CSS/Projects.module.css");
 /* harmony import */ var _CSS_Projects_module_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_CSS_Projects_module_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ProjectCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectCard */ "./src/components/projects/ProjectCard.jsx");
-/* harmony import */ var _resources_Tictactoe_PNG__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../resources/Tictactoe.PNG */ "./src/resources/Tictactoe.PNG");
+/* harmony import */ var _resources_Tictactoe_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../resources/Tictactoe.png */ "./src/resources/Tictactoe.png");
 /* harmony import */ var _resources_tbb_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../resources/tbb.png */ "./src/resources/tbb.png");
-/* harmony import */ var _resources_dotsandboxes_PNG__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../resources/dotsandboxes.PNG */ "./src/resources/dotsandboxes.PNG");
-/* harmony import */ var _resources_coronatracker_PNG__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../resources/coronatracker.PNG */ "./src/resources/coronatracker.PNG");
-/* harmony import */ var _resources_foodstore_PNG__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../resources/foodstore.PNG */ "./src/resources/foodstore.PNG");
-/* harmony import */ var _resources_contestbuddy_PNG__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../resources/contestbuddy.PNG */ "./src/resources/contestbuddy.PNG");
-/* harmony import */ var _resources_algorithmvisualiser_PNG__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../resources/algorithmvisualiser.PNG */ "./src/resources/algorithmvisualiser.PNG");
-/* harmony import */ var _resources_rps_PNG__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../resources/rps.PNG */ "./src/resources/rps.PNG");
+/* harmony import */ var _resources_dotsandboxes_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../resources/dotsandboxes.png */ "./src/resources/dotsandboxes.png");
+/* harmony import */ var _resources_coronatracker_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../resources/coronatracker.png */ "./src/resources/coronatracker.png");
+/* harmony import */ var _resources_foodstore_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../resources/foodstore.png */ "./src/resources/foodstore.png");
+/* harmony import */ var _resources_contestbuddy_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../resources/contestbuddy.png */ "./src/resources/contestbuddy.png");
+/* harmony import */ var _resources_algorithmvisualiser_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../resources/algorithmvisualiser.png */ "./src/resources/algorithmvisualiser.png");
+/* harmony import */ var _resources_rps_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../resources/rps.png */ "./src/resources/rps.png");
 /* harmony import */ var _resources_sudokuSolver_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../resources/sudokuSolver.jpg */ "./src/resources/sudokuSolver.jpg");
 /* harmony import */ var _global_Heading__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../global/Heading */ "./src/components/global/Heading.jsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
@@ -3519,21 +3519,21 @@ const Projects = () => {
     hosted: true
   }, {
     name: "FoodBaZinga",
-    img: _resources_foodstore_PNG__WEBPACK_IMPORTED_MODULE_6__["default"],
+    img: _resources_foodstore_png__WEBPACK_IMPORTED_MODULE_6__["default"],
     details: "This is Food ordering web app made using ReactJS,MongoDB and NodeJS",
     link: "https://www.linkedin.com/posts/rishi-gupta-027298204_webdevelopment-learning-reactjs-activity-6814595111528353792-OW1H",
     code: "https://github.com/rishigupta1109/FoodApp",
     hosted: false
   }, {
     name: "Corona Tracker",
-    img: _resources_coronatracker_PNG__WEBPACK_IMPORTED_MODULE_5__["default"],
+    img: _resources_coronatracker_png__WEBPACK_IMPORTED_MODULE_5__["default"],
     details: "This is a web application which shows stats of corona.It is made using ReactJS,CSS and covidAPI",
     link: "https://rishigupta1109.github.io/CoronaTracker",
     code: "https://github.com/rishigupta1109/CoronaTracker",
     hosted: true
   }, {
     name: "Algorithm Visualiser",
-    img: _resources_algorithmvisualiser_PNG__WEBPACK_IMPORTED_MODULE_8__["default"],
+    img: _resources_algorithmvisualiser_png__WEBPACK_IMPORTED_MODULE_8__["default"],
     details: "This is a algorithm visualiser made using HTML,CSS and JS",
     link: "https://rishigupta1109.github.io/algorithm_visualiser/",
     code: "https://github.com/rishigupta1109/algorithm_visualiser",
@@ -3547,28 +3547,28 @@ const Projects = () => {
     hosted: true
   }, {
     name: "Contest Buddy",
-    img: _resources_contestbuddy_PNG__WEBPACK_IMPORTED_MODULE_7__["default"],
+    img: _resources_contestbuddy_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     details: "This is a Chrome extension ehich shows stats of user on codeforces made using HTML,CSS,codeforcesAPI and JS",
     link: "https://www.linkedin.com/posts/rishi-gupta-027298204_connections-chromeextension-competitiveprogramming-activity-6852170088955674624-XKie",
     code: "https://github.com/rishigupta1109/contestBuddy",
     hosted: false
   }, {
     name: "Rock Paper Scissors",
-    img: _resources_rps_PNG__WEBPACK_IMPORTED_MODULE_9__["default"],
+    img: _resources_rps_png__WEBPACK_IMPORTED_MODULE_9__["default"],
     details: "This is a online multiplayer game made using html ,css, js,nodejs and socket.io",
     link: "https://rishigupta1109.github.io/RockPaperScissor/",
     code: "https://github.com/rishigupta1109/RockPaperScissor",
     hosted: true
   }, {
     name: "Tic Tac Toe",
-    img: _resources_Tictactoe_PNG__WEBPACK_IMPORTED_MODULE_2__["default"],
+    img: _resources_Tictactoe_png__WEBPACK_IMPORTED_MODULE_2__["default"],
     details: "This is a game made using HTML,CSS and JS",
     link: "https://rishigupta1109.github.io/tictaktoe",
     code: "https://github.com/rishigupta1109/tictaktoe",
     hosted: true
   }, {
     name: "Dots and Boxes",
-    img: _resources_dotsandboxes_PNG__WEBPACK_IMPORTED_MODULE_4__["default"],
+    img: _resources_dotsandboxes_png__WEBPACK_IMPORTED_MODULE_4__["default"],
     details: "This is a game made using HTML,CSS and JS",
     link: "https://rishigupta1109.github.io/Dots-Boxes",
     code: "https://github.com/rishigupta1109/Dots-Boxes",
@@ -4320,55 +4320,55 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/resources/Tictactoe.PNG":
+/***/ "./src/resources/Tictactoe.png":
 /*!*************************************!*\
-  !*** ./src/resources/Tictactoe.PNG ***!
+  !*** ./src/resources/Tictactoe.png ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/Tictactoe.d5cc4409.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/Tictactoe.d5cc4409.png");
 
 /***/ }),
 
-/***/ "./src/resources/algorithmvisualiser.PNG":
+/***/ "./src/resources/algorithmvisualiser.png":
 /*!***********************************************!*\
-  !*** ./src/resources/algorithmvisualiser.PNG ***!
+  !*** ./src/resources/algorithmvisualiser.png ***!
   \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/algorithmvisualiser.93917fa5.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/algorithmvisualiser.93917fa5.png");
 
 /***/ }),
 
-/***/ "./src/resources/contestbuddy.PNG":
+/***/ "./src/resources/contestbuddy.png":
 /*!****************************************!*\
-  !*** ./src/resources/contestbuddy.PNG ***!
+  !*** ./src/resources/contestbuddy.png ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/contestbuddy.56d31da2.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/contestbuddy.56d31da2.png");
 
 /***/ }),
 
-/***/ "./src/resources/coronatracker.PNG":
+/***/ "./src/resources/coronatracker.png":
 /*!*****************************************!*\
-  !*** ./src/resources/coronatracker.PNG ***!
+  !*** ./src/resources/coronatracker.png ***!
   \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/coronatracker.1013aa1f.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/coronatracker.1013aa1f.png");
 
 /***/ }),
 
@@ -4398,29 +4398,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/resources/dotsandboxes.PNG":
+/***/ "./src/resources/dotsandboxes.png":
 /*!****************************************!*\
-  !*** ./src/resources/dotsandboxes.PNG ***!
+  !*** ./src/resources/dotsandboxes.png ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/dotsandboxes.a0a9330e.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/dotsandboxes.a0a9330e.png");
 
 /***/ }),
 
-/***/ "./src/resources/foodstore.PNG":
+/***/ "./src/resources/foodstore.png":
 /*!*************************************!*\
-  !*** ./src/resources/foodstore.PNG ***!
+  !*** ./src/resources/foodstore.png ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/foodstore.c7a10109.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/foodstore.c7a10109.png");
 
 /***/ }),
 
@@ -4554,16 +4554,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/resources/rps.PNG":
+/***/ "./src/resources/rps.png":
 /*!*******************************!*\
-  !*** ./src/resources/rps.PNG ***!
+  !*** ./src/resources/rps.png ***!
   \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/rps.a4f71cf7.PNG");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/rps.a4f71cf7.png");
 
 /***/ }),
 

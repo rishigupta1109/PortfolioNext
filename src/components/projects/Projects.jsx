@@ -2,12 +2,12 @@ import style from "../../CSS/Projects.module.css";
 import ProjectCard from "./ProjectCard";
 import ttt from "../../resources/Tictactoe.png";
 import tbb from "../../resources/tbb.png";
-import dnb from "../../resources/dotsandboxes.PNG";
-import ct from "../../resources/coronatracker.PNG";
-import fs from "../../resources/foodstore.PNG";
-import cb from "../../resources/contestbuddy.PNG";
-import av from "../../resources/algorithmvisualiser.PNG";
-import rps from "../../resources/rps.PNG";
+import dnb from "../../resources/dotsandboxes.png";
+import ct from "../../resources/coronatracker.png";
+import fs from "../../resources/foodstore.png";
+import cb from "../../resources/contestbuddy.png";
+import av from "../../resources/algorithmvisualiser.png";
+import rps from "../../resources/rps.png";
 import ss from "../../resources/sudokuSolver.jpg";
 import Heading from "../global/Heading";
 
