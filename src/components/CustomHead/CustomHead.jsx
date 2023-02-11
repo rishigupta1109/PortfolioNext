@@ -5,12 +5,12 @@ export default function CustomHead({ title }) {
   return (
     <Head>
       <link
-        href="favicon-light.png"
+        href="favicon-light.ico"
         rel="icon"
         media="(prefers-color-scheme: light)"
       />
       <link
-        href="favicon-dark.png"
+        href="favicon.ico"
         rel="icon"
         media="(prefers-color-scheme: dark)"
       />
