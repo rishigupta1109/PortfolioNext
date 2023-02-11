@@ -1,6 +1,6 @@
 import style from "../../CSS/Projects.module.css";
 import ProjectCard from "./ProjectCard";
-import ttt from "../../resources/Tictactoe.PNG";
+import ttt from "../../resources/Tictactoe.png";
 import tbb from "../../resources/tbb.png";
 import dnb from "../../resources/dotsandboxes.PNG";
 import ct from "../../resources/coronatracker.PNG";
