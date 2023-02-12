@@ -29,7 +29,7 @@ export default function CustomHead({ title }) {
         content="width=device-width, initial-scale=1.0"
       ></meta>
       <meta property="og:title" content={title} />
-      <meta property="og:image" content={"../../resources/R logo.gif"} />
+      <meta property="og:image" content={"../../../public/favicon.ico"} />
     </Head>
   );
 }

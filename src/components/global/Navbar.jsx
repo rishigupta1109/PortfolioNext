@@ -3,6 +3,7 @@ import style from "../../CSS/Navbar.module.css";
 import Logo from "../../resources/R logo.gif";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+
 const Navbar = (props) => {
   let [mobileview, setmobileview] = useState(false);
   let { mobilemenu, setmobilemenu } = props;

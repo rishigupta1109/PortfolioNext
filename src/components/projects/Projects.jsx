@@ -8,16 +8,26 @@ import fs from "../../resources/fbz.png";
 import cb from "../../resources/cb.png";
 import av from "../../resources/Av.png";
 import rps from "../../resources/rpps.png";
+import bb from "../../resources/bb.png";
 import ss from "../../resources/sudokuSolver.jpg";
 import Heading from "../global/Heading";
 
 const Projects = () => {
   let projectsList = [
     {
+      name: "Blogger`s Block",
+      img: bb,
+      details:
+        "Blogger`s Block is a blogging platform where one can share his experience and knowledge in form of blogs.It is made using NextJs , NodeJs and MongoDB.",
+      link: "https://www.bloggers-block.tech/",
+      code: "https://github.com/rishigupta1109/BloggersBlock",
+      hosted: true,
+    },
+    {
       name: "The Book Bajaar",
       img: tbb,
       details:
-        "The book Bajaar acts as a mediator between the buyer and the seller of a book.",
+        "The book Bajaar acts as a mediator between the buyer and the seller of a book.It is made using ReactJs , NodeJs, ExpressJs and MongoDB.",
       link: "https://www.thebookbajaar.live/",
       code: "https://github.com/rishigupta1109/TheBookBajaar",
       hosted: true,

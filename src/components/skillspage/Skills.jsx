@@ -5,6 +5,7 @@ import cssIcon from "../../resources/CSS3_logo.svg.png";
 import jsIcon from "../../resources/js_icon.png";
 import reactIcon from "../../resources/React-icon.svg.png";
 import nodejsIcon from "../../resources/icons8-nodejs-480.png";
+import nextjsIcon from "../../resources/next.png";
 import expressJSICon from "../../resources/images.png";
 import mongodbIcon from "../../resources/icons8-mongodb-480.png";
 import Heading from "../global/Heading";
@@ -44,6 +45,10 @@ const Skills = () => {
       img: nodejsIcon,
       class: style.nodejs,
     },
+    {
+      img: nextjsIcon,
+      class: style.nextjs,
+    },
   ];
   return (
     <div data-aos="fade-up" className={style.skillcontainer}>
@@ -54,7 +59,7 @@ const Skills = () => {
             <div className={style.skillcircle}>
               <div className={style.outer}>
                 <div className={style.inner}>
-                  <Image height={140} src={skill.img} alt="" />
+                  <Image height={100} src={skill.img} alt="" />
                 </div>
               </div>
               <svg

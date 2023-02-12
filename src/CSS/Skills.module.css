@@ -139,6 +139,10 @@
     animation: anim3 2s linear forwards;
     animation-delay: 14s;
 }
+.nextjs{
+    animation: anim3 2s linear forwards;
+    animation-delay: 16s;
+}
 .reactic{
     animation: anim4 2s 8s linear forwards;
     -webkit-animation: anim4 2s 8s linear forwards;
@@ -206,4 +210,9 @@
     opacity: 0;
     animation: pushing 2s 14s forwards;
     -webkit-animation: pushing 2s 14s forwards;
+}
+.skillsection .skillcircle:nth-child(9){
+    opacity: 0;
+    animation: pushing 2s 16s forwards;
+    -webkit-animation: pushing 2s 16s forwards;
 }

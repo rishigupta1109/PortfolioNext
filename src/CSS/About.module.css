@@ -161,6 +161,9 @@
     }
   }
   .head{
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
     z-index: 1  ;
       color:white;
       align-self: center;
@@ -168,6 +171,13 @@
       font-weight: 500;
       margin-bottom: 25px;
       margin-top: 25px;
+      
+  }
+  .head p:nth-child(1){
+    color:#3e8fff;
+  }
+  .head p:nth-child(2){
+    color:#00ffff;
   }
   .detail{
     color: white;
