@@ -123,7 +123,6 @@ const Navbar = (props) => {
                 >
                   {headings[index].heading}
                 </h2>
-                <hr />
               </>
             );
           })}

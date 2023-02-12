@@ -10,13 +10,16 @@ const LoadingPage = (props) => {
   let script = useRef();
   return (
     <div data-aos="fade-up" className={style.loadingpage}>
-      <div style={{ alignItems: "center" }} className={style.row}>
+      <div className={style.tabrow}>
         <Image src={reactLogo} className={style.reactlogo} alt="rl" />
         <h2>{`${props.page}.jsx`}</h2>
         <Image src={cross} className={style.crosslogo} alt="x" />
         <div className={style.greystrip}></div>
       </div>
-      <div className={style.row}>
+      <div
+        className={style.row}
+        style={{ marginTop: "1rem", paddingLeft: "1rem" }}
+      >
         <div className={style.column}>
           <h2>1</h2>
           <h2>2</h2>

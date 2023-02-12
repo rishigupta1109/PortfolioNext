@@ -1,6 +1,5 @@
 .loadingpage{
      box-shadow: 0 0px 40px rgba(255, 255, 255, 0.2);
-
     background-color: black;
     position: absolute;
     top:15%;
@@ -9,19 +8,24 @@
     height: 80%;
     z-index: 3;
 }
+.tabrow{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+}
 .greystrip{
     background-color: grey;
-    position: absolute;
-    top:0%;
-    left: 30%;
-    width: 70%;
-    height: 7%;
+    width: 100%;
+    height: 50px;
     z-index: 4;
 }
 .reactlogo{
     height:40px;
     width: 40px;
-    margin: 10px 0 0 10px;
+   
 }
 .loadingpage h2{
     color:white;
@@ -67,7 +71,7 @@
         width:0%;
     }
     100%{
-        width:11%; 
+        width:8rem; 
     }
 }
 
@@ -104,16 +108,15 @@
 }
 @media (min-width:500px) and (max-width:1000px)  {
     .greystrip{
-        width:30%;
-        left:70%;
-        height:8%;
+        width:100%;
+        height:50px;
     }
     @keyframes typewriter2 {
         0%{
             width:0%;
         }
         100%{
-            width:22vw; 
+            width:8rem; 
         }
     }
 }
@@ -121,27 +124,42 @@
    .loadingpage h3{
         font-size: 1rem !important;
     }
+    .column h2{
+        font-size: 1em;
+    }
     .greystrip{
-        width:38%;
-        left:62%;
-        height:12%;
+        width:100%;
+        height:30px;
     }
-    @keyframes typewriter2 {
-        0%{
-            width:0%;
-        }
-        100%{
-            width:20vw; 
-        }
-    }
+ 
     .loadingpage{
-        height: 40vh;
+        height: 80vh;
     }
     .reactlogo{
         height: 30px;
         width: 30px;
-        
     }
-    
+    .terminal{
+        padding-left: 1rem;
+    }
+    .terminal h2{
+        font-size: 1.1em;
+    }
+    .tabrow h2{
+        font-size: 1.1em;
+    }
+        @keyframes typewriter2 {
+        0%{
+            width:0%;
+        }
+        100%{
+            width:6rem; 
+        }
+    }
+    .crosslogo{
+        height: 20px;
+        width: 20px;
+        margin-left: 0;
+    }
 }
 

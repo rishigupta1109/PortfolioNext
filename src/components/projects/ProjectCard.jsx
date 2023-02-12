@@ -29,7 +29,7 @@ const Back = (props) => {
       className={style.back}
     >
       <h1>{props.name}</h1>
-      <h3>{props.details}</h3>
+      <p>{props.details}</p>
       <div>
         <a
           target="_blank"
