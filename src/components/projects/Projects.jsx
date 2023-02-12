@@ -2,7 +2,7 @@ import style from "../../CSS/Projects.module.css";
 import ProjectCard from "./ProjectCard";
 import ttt from "../../resources/ttt.png";
 import tbb from "../../resources/tbb.png";
-import dnb from "../../resources/dotsandboxes.png";
+import dnb from "../../resources/dnb.png";
 import ct from "../../resources/coronatracker.png";
 import fs from "../../resources/foodstore.png";
 import cb from "../../resources/contestbuddy.png";
