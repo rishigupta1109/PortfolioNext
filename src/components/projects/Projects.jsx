@@ -7,7 +7,7 @@ import ct from "../../resources/ct.png";
 import fs from "../../resources/fbz.png";
 import cb from "../../resources/cb.png";
 import av from "../../resources/Av.png";
-import rps from "../../resources/rps.png";
+import rps from "../../resources/rpps.png";
 import ss from "../../resources/sudokuSolver.jpg";
 import Heading from "../global/Heading";
 
