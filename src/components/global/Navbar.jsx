@@ -57,7 +57,7 @@ const Navbar = (props) => {
     projects: 2,
     contact: 3,
   };
-  if (!headingToIdx[path]) {
+  if (headingToIdx[path] === undefined) {
     return <div></div>;
   }
   let classes = ["", "", "", ""];
