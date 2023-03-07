@@ -9,7 +9,7 @@
     /* border-top: 2px solid #00ffff; */
 }
 .row{
-    gap:15px;
+    gap:15px;   
     display: flex;
     flex-direction: row;
     justify-content: center;

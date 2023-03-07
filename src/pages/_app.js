@@ -14,10 +14,10 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     router.events.on("routeChangeStart", () => {
       console.log("route change start");
-      setLoading(true);
     });
     router.events.on("routeChangeComplete", () => {
       console.log("route change complete");
+      setLoading(true);
     });
   });
   return (
