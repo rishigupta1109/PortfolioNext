@@ -11,7 +11,7 @@
   width: 500px;
   height: 500px;
   -moz-box-sizing: border-box;
-  background-image: url("../resources/R\ logo.gif");
+  background-image: url("../resources/logo.gif");
   /* background-image: url("../resources/profile_bnw.png"); */
 
   background-position: center;
@@ -41,7 +41,7 @@
   }
   100%{
       /* background-image: url("../resources/profile_bnw.png"); */
-  background-image: url("../resources/R\ logo.gif");
+  background-image: url("../resources/logo.gif");
 
     }
    
