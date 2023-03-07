@@ -2955,7 +2955,7 @@ if (true) {
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var _CSS_Navbar_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../CSS/Navbar.module.css */ "./src/CSS/Navbar.module.css");
 /* harmony import */ var _CSS_Navbar_module_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_CSS_Navbar_module_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _resources_R_logo_gif__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../resources/R logo.gif */ "./src/resources/R logo.gif");
+/* harmony import */ var _resources_R_logo_gif__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../resources/logo.gif */ "./src/resources/logo.gif");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
@@ -4294,9 +4294,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/resources/R logo.gif":
+/***/ "./src/resources/logo.gif":
 /*!**********************************!*\
-  !*** ./src/resources/R logo.gif ***!
+  !*** ./src/resources/logo.gif ***!
   \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {

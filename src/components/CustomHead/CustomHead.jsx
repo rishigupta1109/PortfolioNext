@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../resources/R logo.gif";
+import logo from "../../resources/logo.gif";
 import Head from "next/head";
 export default function CustomHead({ title }) {
   return (

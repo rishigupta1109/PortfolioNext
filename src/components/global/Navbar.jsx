@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "../../CSS/Navbar.module.css";
-import Logo from "../../resources/R logo.gif";
+import Logo from "../../resources/logo.gif";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 
