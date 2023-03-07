@@ -163,7 +163,8 @@
     opacity: 0 ;
 }
 @keyframes pushing {
-    0%{  position: relative;
+    0%{ 
+         position: relative;
         top:-400px;
         opacity: 0;
     }
