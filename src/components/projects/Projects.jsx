@@ -81,7 +81,7 @@ const Projects = () => {
       img: rps,
       details:
         "This is a online multiplayer game made using html ,css, js,nodejs and socket.io",
-      link: "https://rishigupta1109.github.io/RockPaperScissor/",
+      link: "https://rock-paper-scissor-gilt.vercel.app/",
       code: "https://github.com/rishigupta1109/RockPaperScissor",
       hosted: true,
     },
