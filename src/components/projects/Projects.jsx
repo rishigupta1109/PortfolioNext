@@ -10,6 +10,7 @@ import av from "../../resources/Av.png";
 import rps from "../../resources/rpps.png";
 import bb from "../../resources/bb.png";
 import ss from "../../resources/sudokuSolver.jpg";
+import mh from "../../resources/Meethub.png";
 import Heading from "../global/Heading";
 
 const Projects = () => {
@@ -30,6 +31,15 @@ const Projects = () => {
         "The book Bajaar acts as a mediator between the buyer and the seller of a book.It is made using ReactJs , NodeJs, ExpressJs and MongoDB.",
       link: "https://www.thebookbajaar.live/",
       code: "https://github.com/rishigupta1109/TheBookBajaar",
+      hosted: true,
+    },
+    {
+      name: "MeetHub",
+      img: mh,
+      details:
+        "A Video calling web app where people can create and join meetings made using html, css, js and Nodejs.",
+      link: "https://meethub.onrender.com/",
+      code: "https://github.com/rishigupta1109/VideoCallingApp",
       hosted: true,
     },
     {
