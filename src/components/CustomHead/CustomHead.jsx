@@ -4,6 +4,10 @@ import Head from "next/head";
 export default function CustomHead({ title }) {
   return (
     <Head>
+      <meta
+        name="google-site-verification"
+        content="vy9VPX4wk0YnIipQvLnkPdDyBbsnyhg9HVPBtRhVf8w"
+      />
       <link
         href="favicon-light.ico"
         rel="icon"
