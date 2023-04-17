@@ -25,7 +25,7 @@ export default function CustomHead({ title }) {
       />
       <meta
         name="keywords"
-        content="Rishi Gupta, Web developer , MERN developer , IET , Student"
+        content="Rishi Gupta , rishi , gupta , developer , Web developer , MERN developer , IET-DAVV , Student"
       ></meta>
       <meta name="author" content="Rishi Gupta"></meta>
       <meta
