@@ -107,27 +107,34 @@ const Navbar = (props) => {
           </div>
         )}
       </div>
-      {mobilemenu && mobileview && (
-        <div data-aos="fade-left" className={style.mobilemenu}>
-          {headings.map((element, index) => {
-            if (index === 5 || index === 4) {
-              return;
-            }
-            return (
-              <>
-                <h2
-                  key={index}
-                  onClick={clickHandler}
-                  id={index}
-                  className={style[`${classes[index]}`]}
-                >
-                  {headings[index].heading}
-                </h2>
-              </>
-            );
-          })}
-        </div>
-      )}
+      (
+      <div
+        className={style.mobilemenu}
+        style={{
+          position: "absolute",
+          opacity: mobilemenu && mobileview ? "100%" : "0%",
+          left: mobilemenu && mobileview ? "0px" : "-100vw",
+        }}
+      >
+        {headings.map((element, index) => {
+          if (index === 5 || index === 4) {
+            return;
+          }
+          return (
+            <>
+              <h2
+                key={index}
+                onClick={clickHandler}
+                id={index}
+                className={style[`${classes[index]}`]}
+              >
+                {headings[index].heading}
+              </h2>
+            </>
+          );
+        })}
+      </div>
+      )
     </div>
   );
 };
