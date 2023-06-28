@@ -19,8 +19,18 @@ export const LaptopMockup = ({ children, src, hover }) => {
           ></div>
         </div>
         {children}
-        <div class={styles.base}></div>
-        <div class={styles.notch}></div>
+        <div
+          style={{
+            opacity: !hover ? "100%" : "0%",
+          }}
+          class={styles.base}
+        ></div>
+        <div
+          style={{
+            opacity: !hover ? "100%" : "0%",
+          }}
+          class={styles.notch}
+        ></div>
       </div>
     </div>
   );
