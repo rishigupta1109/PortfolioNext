@@ -11,10 +11,20 @@ import rps from "../../resources/rpps.png";
 import bb from "../../resources/bb.png";
 import ss from "../../resources/sudokuSolver.jpg";
 import mh from "../../resources/Meethub.png";
+import sc from "../../resources/sheetcode.png";
 import Heading from "../global/Heading";
 
 const Projects = () => {
   let projectsList = [
+    {
+      name: "SheetCode",
+      img: sc,
+      details:
+        "SheetCode is your ultimate platform for SDE (Software Development Engineer) enthusiasts. Discover a comprehensive collection of coding sheets, track your programming progress, and stay connected with friends.",
+      link: "https://sheetcode.vercel.app/",
+      code: "https://github.com/rishigupta1109/DSASheets",
+      hosted: true,
+    },
     {
       name: "Blogger`s Block",
       img: bb,

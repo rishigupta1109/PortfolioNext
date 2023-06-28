@@ -5,6 +5,7 @@ import { useState } from "react";
 // import LinkIcon from "@mui/icons-material/Link";
 import LinkIcon from "../../resources/linksvg.svg";
 import CodeIcon from "../../resources/code.svg";
+import { LaptopMockup } from "./LaptopMockup";
 const Front = (props) => {
   return (
     <div
@@ -25,6 +26,7 @@ const Back = (props) => {
     <div
       style={{
         opacity: props.show ? "100%" : "0%",
+        top: props.show ? "0%" : "100%",
       }}
       className={style.back}
     >
@@ -77,15 +79,17 @@ const ProjectCard = (props) => {
       onMouseLeave={mouseLeave}
       className={style.card}
     >
-      <Front img={props.img} name={props.name} show={!hovered}></Front>
-      <Back
-        show={hovered}
-        hosted={props.hosted}
-        link={props.link}
-        code={props.code}
-        details={props.details}
-        name={props.name}
-      ></Back>
+      <LaptopMockup hover={hovered} src={props.img}>
+        {/* <Front img={props.img} name={props.name} show={!hovered}></Front> */}
+        <Back
+          show={hovered}
+          hosted={props.hosted}
+          link={props.link}
+          code={props.code}
+          details={props.details}
+          name={props.name}
+        ></Back>
+      </LaptopMockup>
     </div>
   );
 };
