@@ -1,5 +1,6 @@
 import style from "../../CSS/About.module.css";
 import Heading from "../global/Heading";
+import { GlitchText } from "./GlitchText";
 const About = () => {
   return (
     <div data-aos="fade-up" className={style.about}>
@@ -12,9 +13,7 @@ const About = () => {
           {/* <ContactDetails /> */}
         </div>
         <div className={style.infobox}>
-          <div data-aos="fade-left" className={style.name}>
-            Rishi Gupta
-          </div>
+          <GlitchText text={"Rishi Gupta"} />
           <div className={style.subheading}>
             <div className={style.statictxt}>I`m a</div>
             <ul className={style.dyanamictxts}>
