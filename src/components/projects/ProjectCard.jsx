@@ -1,11 +1,12 @@
 import Image from "next/image";
 import style from "../../CSS/ProjectCard.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import CodeIcon from "@mui/icons-material/Code";
 // import LinkIcon from "@mui/icons-material/Link";
 import LinkIcon from "../../resources/linksvg.svg";
 import CodeIcon from "../../resources/code.svg";
 import { LaptopMockup } from "./LaptopMockup";
+import { MobileMockup } from "./MobileMockup";
 const Front = (props) => {
   return (
     <div
@@ -66,6 +67,13 @@ const Back = (props) => {
   );
 };
 const ProjectCard = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   const [hovered, setHovered] = useState(false);
   const mouseEnter = () => {
     setHovered(true);
@@ -78,18 +86,36 @@ const ProjectCard = (props) => {
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       className={style.card}
+      style={{
+        height: isMobile ? "400px" : "100%",
+      }}
     >
-      <LaptopMockup hover={hovered} src={props.img}>
-        {/* <Front img={props.img} name={props.name} show={!hovered}></Front> */}
-        <Back
-          show={hovered}
-          hosted={props.hosted}
-          link={props.link}
-          code={props.code}
-          details={props.details}
-          name={props.name}
-        ></Back>
-      </LaptopMockup>
+      {!isMobile ||
+        (!props.hasMobileImg && (
+          <LaptopMockup hover={hovered} src={props.img}>
+            {/* <Front img={props.img} name={props.name} show={!hovered}></Front> */}
+            <Back
+              show={hovered}
+              hosted={props.hosted}
+              link={props.link}
+              code={props.code}
+              details={props.details}
+              name={props.name}
+            ></Back>
+          </LaptopMockup>
+        ))}
+      {isMobile && props.hasMobileImg && (
+        <MobileMockup hover={hovered} src={props.img}>
+          <Back
+            show={hovered}
+            hosted={props.hosted}
+            link={props.link}
+            code={props.code}
+            details={props.details}
+            name={props.name}
+          ></Back>
+        </MobileMockup>
+      )}
     </div>
   );
 };
