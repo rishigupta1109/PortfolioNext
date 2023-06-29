@@ -162,7 +162,7 @@ const Projects = () => {
               key={object.name}
               img={
                 isMobile
-                  ? object?.mimg
+                  ? object?.mimg !== null
                     ? object.mimg
                     : object.img
                   : object.img

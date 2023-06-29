@@ -90,20 +90,19 @@ const ProjectCard = (props) => {
         height: isMobile ? "400px" : "100%",
       }}
     >
-      {!isMobile ||
-        (!props.hasMobileImg && (
-          <LaptopMockup hover={hovered} src={props.img}>
-            {/* <Front img={props.img} name={props.name} show={!hovered}></Front> */}
-            <Back
-              show={hovered}
-              hosted={props.hosted}
-              link={props.link}
-              code={props.code}
-              details={props.details}
-              name={props.name}
-            ></Back>
-          </LaptopMockup>
-        ))}
+      {(!isMobile || !props.hasMobileImg) && (
+        <LaptopMockup hover={hovered} src={props.img}>
+          {/* <Front img={props.img} name={props.name} show={!hovered}></Front> */}
+          <Back
+            show={hovered}
+            hosted={props.hosted}
+            link={props.link}
+            code={props.code}
+            details={props.details}
+            name={props.name}
+          ></Back>
+        </LaptopMockup>
+      )}
       {isMobile && props.hasMobileImg && (
         <MobileMockup hover={hovered} src={props.img}>
           <Back
