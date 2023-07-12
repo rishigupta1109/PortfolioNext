@@ -26,8 +26,8 @@ const Back = (props) => {
   return (
     <div
       style={{
-        opacity: props.show ? "100%" : "0%",
         top: props.show ? "0%" : "100%",
+        zIndex: "15",
       }}
       className={style.back}
     >

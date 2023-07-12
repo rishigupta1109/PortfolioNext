@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import CustomHead from "@/components/CustomHead/CustomHead";
-
+import stars from "../resources/stars.png";
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const [mobilemenu, setmobilemenu] = useState(false);
@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }) {
           page={router.pathname === "/" ? "About" : router.pathname.slice(1)}
         />
       )}
+
       <Navbar mobilemenu={mobilemenu} setmobilemenu={setmobilemenu} />
       {!loading && !mobilemenu && <Component {...pageProps} />}
     </>

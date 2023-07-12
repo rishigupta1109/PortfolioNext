@@ -6,7 +6,6 @@ export const GlitchText = ({ text: t }) => {
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
-      const random = Math.floor(Math.random() * text.length);
       const randomCharList = [
         "*",
         "#",
@@ -22,21 +21,15 @@ export const GlitchText = ({ text: t }) => {
         "p",
         "t",
         "a",
-        "😉",
-        "🙂",
-        "🥳",
-        "🤩",
-        "😂",
-        "🙃",
       ];
       const randomChar = randomCharList[Math.floor(Math.random() * 14)];
-      setText(t.substring(0, i / 2) + randomChar);
+      setText(t.substring(0, i) + randomChar);
       i++;
     }, 100);
     setTimeout(() => {
       clearInterval(interval);
       setText(t);
-    }, 2500);
+    }, 1400);
   }, []);
   return (
     <div data-aos="fade-left" className={style.name}>

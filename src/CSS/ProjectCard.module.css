@@ -19,6 +19,7 @@
 .back,
 .front {
   position: absolute;
+  background-color: black;
   left: 0;
   top: 0;
   display: flex;
@@ -35,6 +36,10 @@
 }
 .card h1 {
   margin: 0;
+}
+.back {
+  width: 90%;
+  height: 90%;
 }
 .NeonBtn {
   font-family: consolas;

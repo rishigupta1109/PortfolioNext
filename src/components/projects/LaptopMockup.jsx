@@ -5,12 +5,7 @@ export const LaptopMockup = ({ children, src, hover }) => {
   return (
     <div>
       <div class={styles.macbook}>
-        <div
-          class={styles.screen}
-          style={{
-            opacity: !hover ? "100%" : "0%",
-          }}
-        >
+        <div class={styles.screen}>
           <div
             class={styles.viewport}
             style={{
@@ -19,18 +14,8 @@ export const LaptopMockup = ({ children, src, hover }) => {
           ></div>
         </div>
         {children}
-        <div
-          style={{
-            opacity: !hover ? "100%" : "0%",
-          }}
-          class={styles.base}
-        ></div>
-        <div
-          style={{
-            opacity: !hover ? "100%" : "0%",
-          }}
-          class={styles.notch}
-        ></div>
+        <div class={styles.base}></div>
+        <div class={styles.notch}></div>
       </div>
     </div>
   );
