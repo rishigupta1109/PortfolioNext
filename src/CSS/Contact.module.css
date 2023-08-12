@@ -1,179 +1,175 @@
-
-.contactsection{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    /* border-top: 2px solid #00ffff; */
+.contactsection {
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  /* border-top: 2px solid #00ffff; */
 }
-.row{
-    gap:15px;   
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.imgbox{
-    background-color: white;
-    border-radius: 10px;
-    margin:10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    cursor:pointer;
-}
-.details ,.form{
-    min-height: fit-content;
-   height: 80vh;
-   width: 33vw;
-    /* border: 1px solid #ffffff; */
-    border-radius: 5px;
-   padding: 20px;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-     box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.2);
-
-}
-.contactsection h2,.contactsection h3{
-    color: white;
-}
-.NeonBtn{
-    font-family: consolas;
-    position: relative;
-    display: inline-block;
-    padding:15px 30px;
-    margin-top: 35px;
-    border-radius: 5px;
-    color:#ffffff;
-    font-size: 20px;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    cursor: pointer;
- }
- .NeonBtn:hover{
- background: #ffffff;
- color: black;
- /* box-shadow: 0 0 5px #00ffff ,0 0 5px #00ffff,0 0 50px #00ffff,0 0 200px #00ffff; */
- }
- .NeonBtn span{
-     position: absolute;
-     display: block;
- }
- .NeonBtn span:nth-child(1){
-     top:0;
-     left :-100%;
-     width:100%;
-     height:2px;
-     background: linear-gradient(90deg,transparent,#fefefe);
-    animation: animate1 1s linear infinite;
- }
- .NeonBtn span:nth-child(2){
-     top:-100%;
-     right:0;
-     width:2px;
-     height:100%;
-     background: linear-gradient(90deg,transparent,#fafafa);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
- }
- .NeonBtn span:nth-child(4){
-     bottom:0;
-     left :-100%;
-     width:100%;
-     height:2px;
-     background: linear-gradient(90deg,transparent,#ffffff);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.5s;
- }
- .NeonBtn span:nth-child(3){
-     top:-100%;
-     left:0;
-     width:2px;
-     height:100%;
-     background: linear-gradient(90deg,transparent,#ffffff);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.75s;
- }
- @keyframes animate1{
-    0%{
-        left:-100%;
-    }
-    50%,100%{
-        left:100%;
-    }
-}
-@keyframes animate4{
-    0%{
-        left:100%;
-    }
-    50%,100%{
-        left:-100%;
-    }
-}
-@keyframes animate2{
-    0%{
-        top:-100%;
-    }
-    50%,100%{
-        top:100%;
-    }
-}
-@keyframes animate3{
-    0%{
-        top:100%;
-    }
-    50%,100%{
-        top:-100%;
-    }
-}
-.column{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    gap:20px;
-}
-.contactsection input[type="text"]{
-    padding:10px;
-    border-radius: 5px;
-    outline: none;
-    font-size: 20px;
-    color: white;
-    background-color: black;
-}
-@media (max-width:436px) {
-   
-    .head{
-      font-size: 200% !important;
-    }
-    
+.row {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@media (max-width:750px) {
-   .details ,.form{
- height: 600px;
- width: 80vw;
- 
+.imgbox {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.details,
+.form {
+  min-height: fit-content;
+  height: 80vh;
+  width: 33vw;
+  /* border: 1px solid #ffffff; */
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.2);
+}
+.contactsection h2,
+.contactsection h3 {
+  color: white;
+}
+.NeonBtn {
+  font-family: consolas;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 35px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.NeonBtn:hover {
+  background: #ffffff;
+  color: black;
+  /* box-shadow: 0 0 5px #00ffff ,0 0 5px #00ffff,0 0 50px #00ffff,0 0 200px #00ffff; */
+}
+.NeonBtn span {
+  position: absolute;
+  display: block;
+}
+.NeonBtn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fefefe);
+  animation: animate1 1s linear infinite;
+}
+.NeonBtn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #fafafa);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+.NeonBtn span:nth-child(4) {
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.5s;
+}
+.NeonBtn span:nth-child(3) {
+  top: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffffff);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+@keyframes animate4 {
+  0% {
+    left: 100%;
+  }
+  50%,
+  100% {
+    left: -100%;
+  }
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+@keyframes animate3 {
+  0% {
+    top: 100%;
+  }
+  50%,
+  100% {
+    top: -100%;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 20px;
+}
+.contactsection input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+}
+@media (max-width: 436px) {
+  .head {
+    font-size: 200% !important;
+  }
 }
 
-
+@media (max-width: 750px) {
+  .details,
+  .form {
+    height: 600px;
+    width: 80vw;
+  }
 }
-@media (max-width:1178px) {
-    .details ,.form{
-       height: 600px;
- /* height: 80vh; */
-   
-  
+@media (max-width: 1178px) {
+  .details,
+  .form {
+    height: 600px;
+    /* height: 80vh; */
+  }
 }
-  
-    
-}
-

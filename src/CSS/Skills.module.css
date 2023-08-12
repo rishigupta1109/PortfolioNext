@@ -1,219 +1,219 @@
-.skillsection{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    border-left:1px solid whitesmoke;
-    border-right:1px solid whitesmoke;
-    border-bottom:1px solid whitesmoke   ;
-     box-shadow: 0 25px 50px rgba(255, 255, 255, 0.2);
+.skillsection {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgba(245, 245, 245, 0.55);
+  border-right: 1px solid rgba(245, 245, 245, 0.55);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.55);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 25px 50px rgba(255, 255, 255, 0.2);
 
-    background: black;
-    padding: 5%;
-    margin-top: 5%;
-    min-height: 80vh;
+  /* background: black; */
+  padding: 5%;
+  margin-top: 5%;
+  min-height: 80vh;
 }
-.skillimage{
-    height:120px;
-    
-    z-index: 5;
+.skillimage {
+  height: 120px;
+
+  z-index: 5;
 }
 
-.skillcircle{
-    background-color: white;
-    height: 200px;
-    width:200px;
-    border-radius: 200px;
-    margin: 20% 5%;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    z-index: 4;
+.skillcircle {
+  background-color: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  margin: 20% 5%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
 }
-.head{
-    color:white;
-    align-self: center;
-    font-size: 300%;
-    font-weight: 500;
-    margin-top: 2%;
+.head {
+  color: white;
+  align-self: center;
+  font-size: 300%;
+  font-weight: 500;
+  margin-top: 2%;
 }
-.skillcontainer{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 3;
-    padding: 2%;
-    /* border-top: 2px solid #00ffff; */
-    background-color: black;
-    min-height: 84.8vh;
+.skillcontainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  padding: 2%;
+  /* border-top: 2px solid #00ffff; */
+  /* background-color: black; */
+  min-height: 84.8vh;
 }
-.outer{
-    position: absolute;
-    height: 240px;
-    width:240px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgb(255 255 255 / 70%); */
+.outer {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgb(255 255 255 / 70%); */
 }
-.inner{
-    position: absolute;
-    height: 200px;
-    width:200px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+.inner {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
                 inset -4px -4px 6px -1px rgba(255,255,255,0.7),
                 -0.5px -0.5px 0 rgba(255,255,255,1),
                 0.5px -0.5px 0 rgba(0,0,0,0.15),
                 0px 12px 10px -10px rgba(0,0,0,0.15); */
-
 }
 @keyframes anim {
-    100%{
-        stroke-dashoffset: 370px;
-    }
+  100% {
+    stroke-dashoffset: 370px;
+  }
 }
 @keyframes anim1 {
-    100%{
-        stroke-dashoffset: 305px;
-    }
+  100% {
+    stroke-dashoffset: 305px;
+  }
 }
 @keyframes anim2 {
-    100%{
-        stroke-dashoffset: 400px;
-    }
+  100% {
+    stroke-dashoffset: 400px;
+  }
 }
 @keyframes anim3 {
-    100%{
-        stroke-dashoffset: 450px;
-    }
+  100% {
+    stroke-dashoffset: 450px;
+  }
 }
 @keyframes anim4 {
-    100%{
-        stroke-dashoffset: 375px;
-    }
+  100% {
+    stroke-dashoffset: 375px;
+  }
 }
 
-.skillsection circle{
-    fill:none;
-    stroke:url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dashoffset: 846px;
-    stroke-dasharray: 846px ;
+.skillsection circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dashoffset: 846px;
+  stroke-dasharray: 846px;
 }
-.skillsection svg{
-    overflow: visible;
+.skillsection svg {
+  overflow: visible;
 }
-.cpp{
-    animation: anim 2s linear forwards;
-    animation-delay: 0s;
+.cpp {
+  animation: anim 2s linear forwards;
+  animation-delay: 0s;
 }
-.html{
-    animation: anim1 2s linear forwards;
-    animation-delay: 2s;
+.html {
+  animation: anim1 2s linear forwards;
+  animation-delay: 2s;
 }
-.css{
-    animation: anim2 2s linear forwards;
-    animation-delay: 4s;
+.css {
+  animation: anim2 2s linear forwards;
+  animation-delay: 4s;
 }
-.js{
-    animation: anim3 2s linear forwards;
-    animation-delay: 6s;
+.js {
+  animation: anim3 2s linear forwards;
+  animation-delay: 6s;
 }
-.mongo{
-    animation: anim3 2s linear forwards;
-    animation-delay: 10s;
+.mongo {
+  animation: anim3 2s linear forwards;
+  animation-delay: 10s;
 }
-.express{
-    animation: anim3 2s linear forwards;
-    animation-delay: 12s;
+.express {
+  animation: anim3 2s linear forwards;
+  animation-delay: 12s;
 }
-.nodejs{
-    animation: anim3 2s linear forwards;
-    animation-delay: 14s;
+.nodejs {
+  animation: anim3 2s linear forwards;
+  animation-delay: 14s;
 }
-.nextjs{
-    animation: anim3 2s linear forwards;
-    animation-delay: 16s;
+.nextjs {
+  animation: anim3 2s linear forwards;
+  animation-delay: 16s;
 }
-.reactic{
-    animation: anim4 2s 8s linear forwards;
-    -webkit-animation: anim4 2s 8s linear forwards;
+.reactic {
+  animation: anim4 2s 8s linear forwards;
+  -webkit-animation: anim4 2s 8s linear forwards;
 }
-@media (max-width:1000px) {
-    .skillsection{
-        padding: 5vw;
-    }
+@media (max-width: 1000px) {
+  .skillsection {
+    padding: 5vw;
+  }
 }
-@media (max-width:500px) {
-   .skillsection{
+@media (max-width: 500px) {
+  .skillsection {
     padding: 10vw;
-   }
-    
+  }
 }
-.skillcircle{
-    position: absolute;
-    opacity: 0 ;
+.skillcircle {
+  position: absolute;
+  opacity: 0;
 }
 @keyframes pushing {
-    0%{ 
-         position: relative;
-        top:-400px;
-        opacity: 0;
-    }
-   
-    100%{   position: relative;
-        opacity: 1;
-        top:0px;
-    }
+  0% {
+    position: relative;
+    top: -400px;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    opacity: 1;
+    top: 0px;
+  }
 }
 
-
-.skillsection .skillcircle:nth-child(1){
-    animation: pushing  2s 0s forwards;
-    -webkit-animation: pushing  2s 0s forwards;
+.skillsection .skillcircle:nth-child(1) {
+  animation: pushing 2s 0s forwards;
+  -webkit-animation: pushing 2s 0s forwards;
 }
-.skillsection .skillcircle:nth-child(2){
-    animation: pushing 2s 2s forwards;
-    -webkit-animation: pushing 2s 2s forwards;
+.skillsection .skillcircle:nth-child(2) {
+  animation: pushing 2s 2s forwards;
+  -webkit-animation: pushing 2s 2s forwards;
 }
-.skillsection .skillcircle:nth-child(3){
-    animation: pushing 2s 4s forwards;
-    -webkit-animation: pushing 2s 4s forwards;
+.skillsection .skillcircle:nth-child(3) {
+  animation: pushing 2s 4s forwards;
+  -webkit-animation: pushing 2s 4s forwards;
 }
-.skillsection .skillcircle:nth-child(4){
-    animation: pushing 2s 6s forwards;
-    -webkit-animation: pushing 2s 6s forwards;
+.skillsection .skillcircle:nth-child(4) {
+  animation: pushing 2s 6s forwards;
+  -webkit-animation: pushing 2s 6s forwards;
 }
-.skillsection .skillcircle:nth-child(5){
-    opacity: 0;
-    animation: pushing 2s 8s forwards;
-    -webkit-animation: pushing 2s 8s forwards;
+.skillsection .skillcircle:nth-child(5) {
+  opacity: 0;
+  animation: pushing 2s 8s forwards;
+  -webkit-animation: pushing 2s 8s forwards;
 }
-.skillsection .skillcircle:nth-child(6){
-    opacity: 0;
-    animation: pushing 2s 10s forwards;
-    -webkit-animation: pushing 2s 10s forwards;
+.skillsection .skillcircle:nth-child(6) {
+  opacity: 0;
+  animation: pushing 2s 10s forwards;
+  -webkit-animation: pushing 2s 10s forwards;
 }
-.skillsection .skillcircle:nth-child(7){
-    opacity: 0;
-    animation: pushing 2s 12s forwards;
-    -webkit-animation: pushing 2s 12s forwards;
+.skillsection .skillcircle:nth-child(7) {
+  opacity: 0;
+  animation: pushing 2s 12s forwards;
+  -webkit-animation: pushing 2s 12s forwards;
 }
-.skillsection .skillcircle:nth-child(8){
-    opacity: 0;
-    animation: pushing 2s 14s forwards;
-    -webkit-animation: pushing 2s 14s forwards;
+.skillsection .skillcircle:nth-child(8) {
+  opacity: 0;
+  animation: pushing 2s 14s forwards;
+  -webkit-animation: pushing 2s 14s forwards;
 }
-.skillsection .skillcircle:nth-child(9){
-    opacity: 0;
-    animation: pushing 2s 16s forwards;
-    -webkit-animation: pushing 2s 16s forwards;
+.skillsection .skillcircle:nth-child(9) {
+  opacity: 0;
+  animation: pushing 2s 16s forwards;
+  -webkit-animation: pushing 2s 16s forwards;
 }

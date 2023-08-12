@@ -1,11 +1,11 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,3 +25,23 @@ body {
   background: rgba(0, 255, 255, 1);
 }
 
+.stars-bg {
+  position: fixed;
+  background: url("../resources/6438c3059d443cd7a78762eb_stars-bg.png");
+  height: 100%;
+  background-size: 1096px;
+  background-repeat: repeat;
+  width: 98vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: stars 200s linear infinite;
+}
+@keyframes stars {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}

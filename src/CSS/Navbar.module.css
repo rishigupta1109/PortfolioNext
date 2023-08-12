@@ -4,9 +4,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
   padding: 0 50px;
-  border-bottom: 1px outset rgba(128, 128, 128, 0.559);
+  border: 0.5px solid rgba(128, 128, 128, 0.233);
+  /* background: rgba(255, 249, 249, 0.2); */
+  background-color: rgba(211, 211, 211, 0.05);
+  backdrop-filter: blur(1px);
+  border-radius: 30px;
+  margin: 25px;
 }
 .navbar h2 {
   transition: all 100ms ease-in-out;
@@ -21,6 +26,7 @@
   height: 70px;
   width: 70px;
   cursor: pointer;
+  mix-blend-mode: color;
 }
 .active {
   color: #00ffff;

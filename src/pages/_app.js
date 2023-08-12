@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import CustomHead from "@/components/CustomHead/CustomHead";
 import stars from "../resources/stars.png";
+import Image from "next/image";
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const [mobilemenu, setmobilemenu] = useState(false);
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }) {
       )}
 
       <Navbar mobilemenu={mobilemenu} setmobilemenu={setmobilemenu} />
+      <div className="stars-bg" />
       {!loading && !mobilemenu && <Component {...pageProps} />}
     </>
   );
