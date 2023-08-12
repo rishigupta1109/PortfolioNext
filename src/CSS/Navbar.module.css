@@ -8,10 +8,16 @@
   padding: 0 50px;
   border: 0.5px solid rgba(128, 128, 128, 0.233);
   /* background: rgba(255, 249, 249, 0.2); */
-  background-color: rgba(211, 211, 211, 0.05);
-  backdrop-filter: blur(1px);
+  background-color: rgba(228, 228, 228, 0.087);
+  backdrop-filter: blur(10px);
   border-radius: 30px;
   margin: 25px;
+  margin-bottom: 0;
+}
+.nav {
+  position: sticky;
+  top: 25px;
+  z-index: 15;
 }
 .navbar h2 {
   transition: all 100ms ease-in-out;
