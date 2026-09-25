@@ -1,120 +1,47 @@
 import Image from "next/image";
 import style from "../../CSS/ProjectCard.module.css";
-import { useEffect, useState } from "react";
-// import CodeIcon from "@mui/icons-material/Code";
-// import LinkIcon from "@mui/icons-material/Link";
+import { useRef } from "react";
 import LinkIcon from "../../resources/linksvg.svg";
 import CodeIcon from "../../resources/code.svg";
-import { LaptopMockup } from "./LaptopMockup";
-import { MobileMockup } from "./MobileMockup";
-const Front = (props) => {
-  return (
-    <div
-      className={style.front}
-      style={{
-        opacity: props.show ? "100%" : "0",
-      }}
-    >
-      <Image src={props.img} alt={props.name} className={style.img} />
-      {/* <h2>{props.name}</h2> */}
-    </div>
-  );
-};
-const Back = (props) => {
-  // console.log(props.link);
-  let btn1name = props.hosted ? "Visit Site" : "View Overview";
-  return (
-    <div
-      style={{
-        top: props.show ? "0%" : "100%",
-        zIndex: "15",
-      }}
-      className={style.back}
-    >
-      <h1>{props.name}</h1>
-      <p>{props.details}</p>
-      <div>
-        <a
-          target="_blank"
-          className={style.NeonBtn}
-          href={props.link}
-          rel="noreferrer"
-        >
-          {/* <LinkIcon></LinkIcon> */}
-          <Image
-            height={25}
-            width={25}
-            className={style.image}
-            src={LinkIcon}
-          />
-        </a>
-        <a
-          target="_blank"
-          className={style.NeonBtn}
-          href={props.code}
-          rel="noreferrer"
-        >
-          {/* <CodeIcon></CodeIcon> */}
-          <Image
-            height={25}
-            width={25}
-            className={style.image}
-            src={CodeIcon}
-          />
-        </a>
-      </div>
-    </div>
-  );
-};
-const ProjectCard = (props) => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-  }, []);
 
-  const [hovered, setHovered] = useState(false);
-  const mouseEnter = () => {
-    setHovered(true);
+const ProjectCard = (props) => {
+  const cardRef = useRef(null);
+  const mouseMove = (e) => {
+    const el = cardRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--x", `${e.clientX - rect.left}px`);
+    el.style.setProperty("--y", `${e.clientY - rect.top}px`);
   };
-  const mouseLeave = () => {
-    setHovered(false);
-  };
+
   return (
-    <div
-      onMouseEnter={mouseEnter}
-      onMouseLeave={mouseLeave}
-      className={style.card}
-      style={{
-        height: isMobile ? "400px" : "100%",
-      }}
-    >
-      {(!isMobile || !props.hasMobileImg) && (
-        <LaptopMockup hover={hovered} src={props.img}>
-          {/* <Front img={props.img} name={props.name} show={!hovered}></Front> */}
-          <Back
-            show={hovered}
-            hosted={props.hosted}
-            link={props.link}
-            code={props.code}
-            details={props.details}
-            name={props.name}
-          ></Back>
-        </LaptopMockup>
-      )}
-      {isMobile && props.hasMobileImg && (
-        <MobileMockup hover={hovered} src={props.img}>
-          <Back
-            show={hovered}
-            hosted={props.hosted}
-            link={props.link}
-            code={props.code}
-            details={props.details}
-            name={props.name}
-          ></Back>
-        </MobileMockup>
-      )}
+    <div ref={cardRef} onMouseMove={mouseMove} className={style.card}>
+      <Image src={props.img} alt={props.name} className={style.img} />
+      <div className={style.scrim} />
+      <div className={style.info}>
+        <h3 className={style.title}>{props.name}</h3>
+        <p className={style.details}>{props.details}</p>
+        <div className={style.actions}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={props.link}
+            className={style.iconBtn}
+            aria-label={props.hosted ? "Visit live site" : "View overview"}
+          >
+            <Image height={17} width={17} src={LinkIcon} alt="" aria-hidden="true" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={props.code}
+            className={style.iconBtn}
+            aria-label="View source code"
+          >
+            <Image height={17} width={17} src={CodeIcon} alt="" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

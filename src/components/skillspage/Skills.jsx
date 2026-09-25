@@ -56,7 +56,7 @@ const Skills = () => {
       <div className={style.skillsection}>
         {arr.map((skill) => {
           return (
-            <div className={style.skillcircle}>
+            <div key={skill.class} className={style.skillcircle}>
               <div className={style.outer}>
                 <div className={style.inner}>
                   <Image height={100} src={skill.img} alt="" />
@@ -70,8 +70,8 @@ const Skills = () => {
               >
                 <defs>
                   <linearGradient id="GradientColor">
-                    <stop offset="0%" stopColor="#09ceff" />
-                    <stop offset="100%" stopColor="#673ab7" />
+                    <stop offset="0%" stopColor="#5eead4" />
+                    <stop offset="100%" stopColor="#60a5fa" />
                   </linearGradient>
                 </defs>
                 <circle

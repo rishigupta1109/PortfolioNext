@@ -9,7 +9,7 @@ import Image from "next/image";
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export default function ContactDetails() {
   return (
-    <div className={style.row}>
+    <div className={style.socialRow}>
       <div className={style.imgbox}>
         <a
           href="https://www.linkedin.com/in/rishi-gupta-027298204"

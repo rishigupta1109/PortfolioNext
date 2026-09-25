@@ -1,15 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 import style from "../../CSS/Navbar.module.css";
-import Logo from "../../resources/logo.gif";
+import Logo from "../../resources/logo-transparent.png";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = (props) => {
   let [mobileview, setmobileview] = useState(false);
   let { mobilemenu, setmobilemenu } = props;
   const router = useRouter();
   const resize = () => {
-    if (window.innerWidth > 500) {
+    if (window.innerWidth > 700) {
       if (mobileview) {
         setmobileview(false);
       }
@@ -44,12 +46,11 @@ const Navbar = (props) => {
     resize();
   }, []);
   let headings = [
-    { heading: "About", link: "/" },
+    { heading: "About", link: "" },
     { heading: "Skills", link: "skills" },
     { heading: "Projects", link: "projects" },
     { heading: "Contact Me", link: "contact" },
   ];
-  console.log(router.pathname.slice(1));
   const path =
     router.pathname.slice(1).length === 0 ? "about" : router.pathname.slice(1);
   let headingToIdx = {
@@ -65,49 +66,58 @@ const Navbar = (props) => {
   classes[headingToIdx[path]] = "active";
   headings[headingToIdx[path]].heading =
     "<" + headings[headingToIdx[path]].heading + "/>";
-  const clickHandler = (e) => {
+  const navClickHandler = () => {
     if (mobileview) {
       menuHandler();
-    }
-    if (Number(e.target.id) !== Number(props.page)) {
-      router.push(`/${headings[Number(e.target.id)].link}`);
     }
   };
   return (
     <div className={style.nav}>
       <div className={style.navbar}>
-        <Image
-          className={style.logo}
-          onClick={clickHandler}
-          id="0"
-          alt="Logo"
-          src={Logo}
-        ></Image>
-        {!mobileview &&
-          headings.map((element, index) => {
-            if (index === 5 || index === 4) {
-              return;
-            }
-            return (
-              <h2
-                key={index}
-                onClick={clickHandler}
-                id={index}
-                className={style[`${classes[index]}`]}
-              >
-                {headings[index].heading}
-              </h2>
-            );
-          })}
-        {mobileview && (
-          <div onClick={menuHandler} className={style.menubtnbox}>
-            <div className={style.line1} ref={Line1}></div>
-            <div className={style.line2} ref={Line2}></div>
-            <div className={style.line3} ref={Line3}></div>
+        <Link
+          href="/"
+          onClick={navClickHandler}
+          aria-label="Home"
+          className={style.logoLink}
+        >
+          <Image className={style.logo} alt="Logo" src={Logo}></Image>
+        </Link>
+        {!mobileview && (
+          <div className={style.navLinks}>
+            {headings.map((element, index) => {
+              if (index === 5 || index === 4) {
+                return;
+              }
+              return (
+                <Link
+                  key={index}
+                  href={`/${headings[index].link}`}
+                  onClick={navClickHandler}
+                  className={style[`${classes[index]}`]}
+                >
+                  {headings[index].heading}
+                </Link>
+              );
+            })}
           </div>
         )}
+        <div className={style.navActions}>
+          <ThemeToggle />
+          {mobileview && (
+            <button
+              type="button"
+              onClick={menuHandler}
+              aria-label={mobilemenu ? "Close menu" : "Open menu"}
+              aria-expanded={mobilemenu}
+              className={style.menubtnbox}
+            >
+              <div className={style.line1} ref={Line1}></div>
+              <div className={style.line2} ref={Line2}></div>
+              <div className={style.line3} ref={Line3}></div>
+            </button>
+          )}
+        </div>
       </div>
-      (
       <div
         className={style.mobilemenu}
         style={{
@@ -121,20 +131,17 @@ const Navbar = (props) => {
             return;
           }
           return (
-            <>
-              <h2
-                key={index}
-                onClick={clickHandler}
-                id={index}
-                className={style[`${classes[index]}`]}
-              >
-                {headings[index].heading}
-              </h2>
-            </>
+            <Link
+              key={index}
+              href={`/${headings[index].link}`}
+              onClick={navClickHandler}
+              className={style[`${classes[index]}`]}
+            >
+              {headings[index].heading}
+            </Link>
           );
         })}
       </div>
-      )
     </div>
   );
 };
