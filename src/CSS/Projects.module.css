@@ -1,22 +1,21 @@
 .projectssection {
-  /* border-top:  2px solid #00ffff; */
-  /* background-color: black; */
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .head {
-  color: white;
+  color: var(--text);
   align-self: center;
   font-size: 300%;
   font-weight: 500;
   margin-bottom: 5%;
 }
 .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
 }
 @media (max-width: 436px) {
   .head {

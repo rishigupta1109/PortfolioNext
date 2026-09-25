@@ -32,37 +32,80 @@
   min-height: fit-content;
   height: 80vh;
   width: 33vw;
-  /* border: 1px solid #ffffff; */
-  border-radius: 5px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  border-radius: 14px;
   padding: 20px;
   margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 .contactsection h2,
-.contactsection h3 {
-  color: white;
+.contactsection label {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+.errorMsg,
+.successMsg {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.errorMsg {
+  color: #fca5a5;
+  background: rgba(252, 165, 165, 0.1);
+  border: 1px solid rgba(252, 165, 165, 0.3);
+}
+.successMsg {
+  color: var(--accent);
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.3);
 }
 .NeonBtn {
-  font-family: consolas;
+  appearance: none;
+  background: transparent;
+  font-family: var(--font-mono);
   position: relative;
   display: inline-block;
   padding: 15px 30px;
   margin-top: 35px;
   border-radius: 5px;
-  color: #ffffff;
-  font-size: 20px;
-  transition: 0.5s;
-  letter-spacing: 4px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 18px;
+  transition: 0.3s;
+  letter-spacing: 2px;
   overflow: hidden;
   cursor: pointer;
+  animation: btnglow 2.6s ease-in-out infinite;
+}
+.NeonBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  animation: none;
+}
+@keyframes btnglow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(94, 234, 212, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(94, 234, 212, 0.4);
+  }
 }
 .NeonBtn:hover {
-  background: #ffffff;
-  color: black;
-  /* box-shadow: 0 0 5px #00ffff ,0 0 5px #00ffff,0 0 50px #00ffff,0 0 200px #00ffff; */
+  background: var(--accent);
+  color: var(--bg);
+  animation: none;
+  box-shadow: 0 0 22px rgba(94, 234, 212, 0.55);
+}
+.NeonBtn:active {
+  transform: scale(0.97);
 }
 .NeonBtn span {
   position: absolute;
@@ -145,13 +188,21 @@
   align-items: baseline;
   gap: 20px;
 }
-.contactsection input[type="text"] {
+.contactsection input[type="text"],
+.contactsection input[type="email"] {
   padding: 10px;
   border-radius: 5px;
+  border: 1px solid var(--surface-border);
   outline: none;
-  font-size: 20px;
-  color: white;
-  background-color: black;
+  font-size: 18px;
+  font-family: var(--font-mono);
+  color: var(--text);
+  background-color: var(--bg-elevated);
+  transition: border-color 200ms ease;
+}
+.contactsection input[type="text"]:focus,
+.contactsection input[type="email"]:focus {
+  border-color: var(--accent);
 }
 @media (max-width: 436px) {
   .head {

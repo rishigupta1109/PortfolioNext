@@ -10,6 +10,8 @@ const Contact = () => {
   let [name, setName] = useState("");
   let [email, setEmail] = useState("");
   let [message, setMessage] = useState("");
+  const [status, setStatus] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
   const nameChangeHandler = (e) => {
     setName(e.target.value);
   };
@@ -34,36 +36,40 @@ const Contact = () => {
   // Get a reference to the database service
   const db = getDatabase(app);
 
-  const clickHandler = (e) => {
+  const submitHandler = async (e) => {
+    e.preventDefault();
     if (
-      name.trim() !== "" &&
-      email.trim() !== "" &&
-      email.trim().includes("@") &&
-      email.trim().includes(".") &&
-      message.trim() !== ""
+      name.trim() === "" ||
+      email.trim() === "" ||
+      !email.trim().includes("@") ||
+      !email.trim().includes(".") ||
+      message.trim() === ""
     ) {
-      try {
-        set(ref(db, "contactForm/" + name), {
-          username: name,
-          email: email,
-          message: message,
-        });
-        alert("Reached to Me");
-        setName("");
-        setEmail("");
-        setMessage("");
-      } catch (err) {
-        alert(err);
-      }
-    } else {
-      alert("Please write a valid input");
+      setStatus({ type: "error", text: "Fill in every field with a valid email." });
+      return;
+    }
+    setSubmitting(true);
+    try {
+      await set(ref(db, "contactForm/" + name), {
+        username: name,
+        email: email,
+        message: message,
+      });
+      setStatus({ type: "success", text: "Message sent. I will get back to you soon." });
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      setStatus({ type: "error", text: "Could not send that. Please try again." });
+    } finally {
+      setSubmitting(false);
     }
   };
   return (
     <div data-aos="fade-up" className={style.contactsection}>
       <Heading>const contactMe;</Heading>
       <div className={style.row}>
-        <div className={style.form}>
+        <form className={style.form} onSubmit={submitHandler}>
           <h2>Connect with me on</h2>
           <ContactDetails />
           <h2>Drop me a message</h2>
@@ -72,49 +78,66 @@ const Contact = () => {
               className={style.row}
               style={{ width: "100%", justifyContent: "space-between" }}
             >
-              <h3>let name = </h3>{" "}
+              <label htmlFor="name">let name = </label>
               <input
                 value={name}
                 onChange={nameChangeHandler}
                 type="text"
                 name="name"
                 id="name"
+                autoComplete="name"
               />
             </div>
             <div
               className={style.row}
               style={{ width: "100%", justifyContent: "space-between" }}
             >
-              <h3>let email = </h3>{" "}
+              <label htmlFor="email">let email = </label>
               <input
                 value={email}
                 onChange={emailChangeHandler}
-                type="text"
+                type="email"
+                inputMode="email"
+                spellCheck={false}
                 name="email"
                 id="email"
+                autoComplete="email"
               />
             </div>
             <div
               className={style.row}
               style={{ width: "100%", justifyContent: "space-between" }}
             >
-              <h3>let message = </h3>{" "}
+              <label htmlFor="message">let message = </label>
               <input
                 type="text"
                 value={message}
                 onChange={messageChangeHandler}
                 name="message"
                 id="message"
+                autoComplete="off"
               ></input>
             </div>
           </div>
-          <a target="_blank" className={style.NeonBtn} onClick={clickHandler}>
-            Drop message<span></span>
+          {status && (
+            <div
+              role="status"
+              aria-live="polite"
+              className={
+                status.type === "error" ? style.errorMsg : style.successMsg
+              }
+            >
+              {status.text}
+            </div>
+          )}
+          <button type="submit" className={style.NeonBtn} disabled={submitting}>
+            {submitting ? "Sending…" : "Drop message"}
             <span></span>
             <span></span>
             <span></span>
-          </a>
-        </div>
+            <span></span>
+          </button>
+        </form>
         <div className={style.details}>
           <h2>Find me here</h2>
           <iframe
@@ -124,6 +147,7 @@ const Contact = () => {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
+            title="Location map"
           ></iframe>
         </div>
       </div>

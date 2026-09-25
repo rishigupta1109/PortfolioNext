@@ -1,12 +1,15 @@
 .loadingpage{
-     box-shadow: 0 0px 40px rgba(255, 255, 255, 0.2);
-    background-color: black;
+    box-shadow: 0 0 60px rgba(94, 234, 212, 0.12);
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
     position: absolute;
     top:15%;
     left:10%;
     width: 80%;
     height: 80%;
     z-index: 3;
+    font-family: var(--font-mono);
 }
 .tabrow{
     padding-left: 1rem;
@@ -17,18 +20,19 @@
     gap:15px;
 }
 .greystrip{
-    background-color: grey;
+    background-color: var(--surface-border);
     width: 100%;
     height: 50px;
     z-index: 4;
+    border-radius: 8px 8px 0 0;
 }
 .reactlogo{
     height:40px;
     width: 40px;
-   
+
 }
 .loadingpage h2{
-    color:white;
+    color:var(--text);
 }
 .row{
     display: flex;
@@ -36,7 +40,7 @@
     padding: 0;
 }
 .row h2{
-    color: white;
+    color: var(--text);
     margin: 0;
     margin-left: 3% !important;
 }
@@ -53,7 +57,7 @@
     margin-left: 47% !important;
 }
 .row h3{
-    color: white;
+    color: var(--text);
     margin: 0;
     margin-left: 3%;
     font-size: 24px;
@@ -77,11 +81,11 @@
 
 @keyframes blinkcaret {
     from{
-        border-right: 2px solid white;
+        border-right: 2px solid var(--accent);
 
     }
     to{
-        border-right: 2px solid black;
+        border-right: 2px solid transparent;
     }
 }
 .fscript{
@@ -89,11 +93,11 @@
     flex-direction: row;
     padding: 0;
     width:125%;
-    animation: blinkcaret 1s linear 3,typewriter 3s steps(26)   ;
+    animation: blinkcaret 0.4s linear 3,typewriter 1.2s steps(26)   ;
     overflow: hidden;
 }
 .terminal{
-    border-top: 2px solid white;
+    border-top: 1px solid var(--surface-border);
 }
 .fscripttwo{
     display: flex;
@@ -101,9 +105,9 @@
     padding: 0;
     width:0%;
     flex-wrap: nowrap;
-    
-    animation: blinkcaret 1s linear infinite,typewriter2 steps(9) 2s  forwards ;
-    animation-delay: 3s;
+
+    animation: blinkcaret 0.4s linear infinite,typewriter2 steps(9) 0.8s  forwards ;
+    animation-delay: 1.2s;
     overflow: hidden;
 }
 @media (min-width:500px) and (max-width:1000px)  {

@@ -1,11 +1,12 @@
 .footer {
   text-align: center;
-  /* background-color: black; */
-  color: white;
-  font-size: 20px;
-  letter-spacing: 2px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 24px 20px 16px;
+  border-top: 1px solid var(--surface-border);
+  margin-top: 40px;
 }
 @media (max-width: 500px) {
   .footer {

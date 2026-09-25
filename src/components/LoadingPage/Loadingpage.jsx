@@ -6,7 +6,7 @@ import Image from "next/image";
 const LoadingPage = (props) => {
   setTimeout(() => {
     props.completeLoading();
-  }, 6000);
+  }, 2300);
   let script = useRef();
   return (
     <div data-aos="fade-up" className={style.loadingpage}>

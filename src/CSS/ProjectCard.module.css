@@ -1,90 +1,123 @@
-.img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
 .card {
-  background-color: #00000083;
-  cursor: pointer;
-  color: white;
-  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.151);
-  margin: 20px;
-  border-radius: 10px;
-  overflow-y: hidden;
   position: relative;
-  aspect-ratio: 2;
-  width: 40vw;
-  padding: 1rem;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--surface-border);
+  background: var(--bg-elevated);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  --x: 50%;
+  --y: 50%;
+  transition: transform 300ms ease, border-color 300ms ease;
 }
-.back,
-.front {
+.card:hover {
+  border-color: rgba(94, 234, 212, 0.4);
+  transform: translateY(-4px);
+}
+.card::before {
+  content: "";
   position: absolute;
-  background-color: black;
-  left: 0;
-  top: 0;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  background: radial-gradient(320px circle at var(--x) var(--y), rgba(94, 234, 212, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 600ms ease;
+}
+.card:hover .img {
+  transform: scale(1.04);
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 45%, rgba(2, 3, 6, 0.85) 78%, rgba(2, 3, 6, 0.97) 100%);
+  transition: background 350ms ease;
+}
+.card:hover .scrim {
+  background: linear-gradient(180deg, rgba(2, 3, 6, 0.2) 0%, rgba(2, 3, 6, 0.75) 45%, rgba(2, 3, 6, 0.97) 100%);
+}
+
+.info {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 3;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  aspect-ratio: 2;
-  width: 35vw;
-  text-align: center;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px;
-  transition: all 0.6s ease-in-out;
+  gap: 6px;
 }
-.card h1 {
+.title {
   margin: 0;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
-.back {
-  width: 90%;
-  height: 90%;
-}
-.NeonBtn {
-  font-family: consolas;
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  margin: 5px;
-  border-radius: 5px;
-  color: #00ffff;
-  font-size: 20px;
-  transition: 0.5s;
-  letter-spacing: 4px;
+.details {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  cursor: pointer;
-  /* box-shadow: 0 0 7px  rgba(255, 255, 255, 0.158); */
+  transition: max-height 400ms ease, opacity 300ms ease, margin-top 400ms ease;
 }
-.NeonBtn:hover {
-  background: white;
-  color: black;
-  /* box-shadow: 0 0 5px #00ffff ,0 0 25px #00ffff,0 0 50px #00ffff,0 0 200px #00ffff; */
+.card:hover .details {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 4px;
 }
-.NeonBtn:hover .image {
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  background: rgba(10, 14, 26, 0.7);
+  backdrop-filter: blur(6px);
+  transition: background 250ms ease, border-color 250ms ease, transform 200ms ease;
+}
+.iconBtn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.iconBtn:hover img {
   filter: invert(1);
 }
-@media (max-width: 550px) {
-  .front,
-  .back {
-    width: 80vw;
-    height: 60vw;
-    /* height: 50vw; */
-    padding: 1rem;
-  }
-  .card {
-    padding: 1rem;
-    width: 100vw;
-    margin: 10px 0;
-  }
+.iconBtn:active {
+  transform: scale(0.95);
 }
-@media (max-width: 1100px) {
-  .card,
-  .front,
-  .back {
-    padding: 1rem;
-    width: 80vw;
-    height: 40vh;
-    margin: 10px 0;
+
+@media (max-width: 550px) {
+  .details {
+    max-height: 140px;
+    opacity: 1;
+    margin-top: 4px;
   }
 }

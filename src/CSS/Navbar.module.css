@@ -1,122 +1,150 @@
 .navbar {
-  color: white;
+  color: var(--text);
+  font-family: var(--font-mono);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* background-color: black; */
-  padding: 0 50px;
-  border: 0.5px solid rgba(128, 128, 128, 0.233);
-  /* background: rgba(255, 249, 249, 0.2); */
-  background-color: rgba(228, 228, 228, 0.087);
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
-  margin: 25px;
+  padding: 0 28px 0 20px;
+  border: 1px solid var(--surface-border);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  margin: 20px;
   margin-bottom: 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 .nav {
   position: sticky;
-  top: 25px;
+  top: 20px;
   z-index: 15;
 }
-.navbar h2 {
-  transition: all 100ms ease-in-out;
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
 }
-.navbar h2:not(.active):hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  color: #00ffff;
-  text-shadow: 1px 1px 2px rgba(0, 255, 255, 1);
+.navActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
-.logo {
-  height: 70px;
-  width: 70px;
+.navbar a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: color 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+.navbar a:not(.active):not(.logoLink):hover {
   cursor: pointer;
-  mix-blend-mode: color;
+  color: var(--text);
+  background-color: var(--surface);
 }
 .active {
-  color: #00ffff;
-  transform: scale(1.2);
+  color: var(--accent) !important;
+  background-color: rgba(94, 234, 212, 0.12);
+  font-weight: 600;
 }
 @media (min-width: 500px) and (max-width: 1000px) {
-  .nav h2 {
-    font-size: larger;
-  }
-  .active {
-    font-size: 2rem;
+  .navbar a {
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 500px) {
-  .nav h2 {
+  .navbar a {
     font-size: 15px;
   }
 }
+.logoLink {
+  line-height: 0;
+  padding: 0;
+}
+.logo {
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  transition: transform 400ms ease;
+}
+.logo:hover {
+  transform: rotate(360deg);
+}
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+.themeToggle:hover {
+  color: var(--accent);
+  background-color: rgba(94, 234, 212, 0.12);
+  transform: translateY(-2px);
+}
 .menubtnbox {
-  height: 50px;
-  width: 50px;
+  height: 44px;
+  width: 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 .line1,
 .line2,
 .line3 {
-  height: 10px;
-  width: 40px;
-  background-color: white;
-  margin: 5px 0;
+  height: 3px;
+  width: 28px;
+  background-color: var(--text);
+  margin: 4px 0;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  transition: ease-in-out 0.3s;
-  -webkit-transition: ease-in-out 0.3s;
-  -moz-transition: ease-in-out 0.3s;
-  -ms-transition: ease-in-out 0.3s;
-  -o-transition: ease-in-out 0.31s;
+  transition: transform 0.3s ease-in-out;
 }
 .mobilemenu {
-  /* height: 60vh; */
-  background-color: rgb(0, 0, 0);
+  background-color: var(--bg-elevated);
+  backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
-  height: calc(100%-85px);
+  height: calc(100% - 85px);
   justify-content: flex-start;
-  gap: 5vh;
-
+  gap: 3vh;
   align-items: center;
   position: absolute;
   top: 100px;
   left: 0;
   z-index: 5;
   width: 100%;
-  color: white;
+  color: var(--text);
   transition: all 0.5s ease-in-out;
 }
-.mobilemenu h2 {
+.mobilemenu a {
   margin-left: 0;
   margin-right: 0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 .mobilemenu hr {
   width: 80%;
   height: 1px;
-  background-color: rgba(194, 194, 194, 0.141);
+  background-color: var(--surface-border);
   border: none;
-}
-.logo:hover {
-  animation: rotate 1s ease-in-out forwards;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
