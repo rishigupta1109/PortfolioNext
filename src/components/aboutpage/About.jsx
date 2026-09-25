@@ -22,8 +22,8 @@ const About = () => {
           </div>
 
           <div className={style.detail}>
-            I am a third year student persuing bachelor of engineering in
-            electronics and telecommunication{" "}
+            I am an SDE-2 at Nuclei with two years of experience, and a
+            graduate in electronics and telecommunication engineering from{" "}
             <a href="http://ietdavv.edu.in">@IETDAVV</a> . I am a coding
             enthusiast who likes to learn and apply things in real world.
           </div>
