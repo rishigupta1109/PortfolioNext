@@ -21,11 +21,11 @@ export default function CustomHead({ title }) {
       <title>{title}</title>
       <meta
         name="description"
-        content="Hello There! , My name is Rishi Gupta. I am a pre-final year student persuing Bachelor of engineering in electronics and telecommunication branch in IET DAVV, Indore. I am a full stack erb developer experienced in MERN stack and NEXTJS."
+        content="Hello There! , My name is Rishi Gupta. I am an SDE-2 at Nuclei with two years of experience, and a graduate in electronics and telecommunication engineering from IET DAVV, Indore. I am a full stack developer experienced in MERN stack and NEXTJS."
       />
       <meta
         name="keywords"
-        content="Rishi Gupta , rishi , gupta , developer , Web developer , MERN developer , IET-DAVV , Student"
+        content="Rishi Gupta , rishi , gupta , developer , Web developer , MERN developer , SDE , Nuclei , IET-DAVV"
       ></meta>
       <meta name="author" content="Rishi Gupta"></meta>
       <meta
